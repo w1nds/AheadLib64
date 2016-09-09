@@ -1,8 +1,5 @@
 format MS64 COFF
 ;===================================================
-;" X64 HOOK PiaoYun/P.Y.G"
-;" bbs.chinapyg.com "
-;" www.dllhook.com "
 ;===================================================
 
 public AsmFunc1
