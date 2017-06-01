@@ -19,7 +19,7 @@ x64 dll hijacking tool(like AheadLib)
 		AsmFunc2((INT64)RealFuncAddr);
 	}
  
-**3.**这里只是保存一下第一个参数到rax
+**3.** 这里只是保存一下第一个参数到rax
 
 
 	AsmFunc1:
@@ -27,14 +27,14 @@ x64 dll hijacking tool(like AheadLib)
 			retn  
 		
 		
-**4.**让rax指向真正的 eip(rcx是第一个参数) 还原第一个参数，跳到原始函数执行
+**4.** 让rax指向真正的 eip(rcx是第一个参数) 还原第一个参数，跳到原始函数执行
 
 
 	AsmFunc2:
 	        xchg rax,rcx
 			jmp rax  
 		
-**5.**返回的时候是先返回到 AsmFunc2 下面 再返回到 原始调用处的下面。
+**5.** 返回的时候是先返回到 AsmFunc2 下面 再返回到 原始调用处的下面。
 
 自己找个DLL，劫持下走一遍就清晰了。
  
